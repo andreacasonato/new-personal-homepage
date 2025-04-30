@@ -1,0 +1,349 @@
+/* ==================== 
+   CSS Reset & Variables
+   ==================== */
+   :root {
+    /* Colors */
+    --text-dark: #3B3B3B;
+    --text-light: #515151;
+    --text-white: #FBFBFB;
+    --text-box: #FEFEFE;
+    --primary-blue: #0057B7;
+    --icon-blue: #2281FF;
+    --accent-orange: #FF8A00;
+    --background: #FFFFFF;
+    
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    
+    /* Typography */
+    --font-heading: 'Radio Canada', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+    
+    /* Border radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-full: 9999px;
+    
+    /* Transition */
+    --transition-base: all 0.3s ease;
+}
+
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    background-color: var(--background);
+    font-weight: 400;
+    color: var(--text-light);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==================== 
+   Typography
+   ==================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--text-dark);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: var(--space-lg);
+}
+
+h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: var(--space-lg);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    color: var(--text-white);
+}
+
+p {
+    margin-bottom: var(--space-md);
+}
+
+/* ==================== 
+   Layout
+   ==================== */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+}
+
+section {
+    padding: var(--space-xl) 0;
+}
+
+/* ==================== 
+   Header & Navigation
+   ==================== */
+.site-header {
+    padding: var(--space-sm) 0;
+    background-color: var(--background);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.nav-link {
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: var(--transition-base);
+}
+
+.nav-link:hover {
+    color: var(--primary-blue);
+}
+
+/* ==================== 
+   Hero Section
+   ==================== */
+.hero-section {
+    text-align: center;
+    padding-top: var(--space-xl);
+}
+
+.hero-text {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin: var(--space-lg) auto;
+    max-width: 500px;
+    justify-content: center;
+    /* Force tags to display in approximately two lines */
+    max-height: calc(2.5rem * 2 + var(--space-xs));
+    overflow: hidden;
+}
+
+.tag {
+    background: linear-gradient(90deg, #003B89 0%, #63A6FF 100%);
+    color: var(--text-white);
+    padding: 0.4rem 0.75rem;
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* ==================== 
+   Work Section
+   ==================== */
+.work-section {
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.work-card {
+    background-color: var(--primary-blue);
+    color: var(--text-white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-md);
+    text-align: left;
+    transition: var(--transition-base);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.work-card p {
+    color: var(--text-box);
+    margin-bottom: var(--space-md);
+}
+
+.work-card .btn {
+    margin-top: auto;
+}
+
+/* ==================== 
+   Connect Section
+   ==================== */
+.connect-section {
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(var(--space-lg), 5vw, var(--space-xl));
+    margin-top: var(--space-xl);
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    transition: var(--transition-base);
+}
+
+.social-link:hover .icon-circle {
+    transform: translateY(-5px);
+    background-color: var(--primary-blue);
+}
+
+.icon-circle {
+    background-color: var(--icon-blue);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+    transition: var(--transition-base);
+}
+
+.social-name {
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* ==================== 
+   Footer
+   ==================== */
+.site-footer {
+    text-align: center;
+    padding: var(--space-sm) 0;
+    background-color: #f9f9f9;
+    margin-top: var(--space-xl);
+}
+
+.footer-text {
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.footer-text i {
+    margin-right: var(--space-xs);
+}
+
+/* ==================== 
+   Buttons
+   ==================== */
+.btn {
+    display: inline-block;
+    background-color: var(--accent-orange);
+    color: var(--text-dark);
+    padding: 0.5rem 1.25rem;
+    border: none;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition-base);
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #e67e00;
+    transform: translateY(-2px);
+}
+
+/* ==================== 
+   Media Queries
+   ==================== */
+@media (max-width: 768px) {
+    section {
+        padding: var(--space-lg) 0;
+    }
+    
+    .social-icons {
+        gap: var(--space-lg);
+    }
+    
+    .icon-circle {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .work-card {
+        padding: var(--space-lg);
+    }
+    
+    .tags {
+        gap: var(--space-xs);
+    }
+    
+    .social-icons {
+        gap: var(--space-md);
+    }
+}

@@ -3,66 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Andrea Casonato - Software Developer and UI/UX Designer">
     <title>Andrea Casonato - Software Development, UX/UI, SaaS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Radio+Canada:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b075123ac6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <img src="Logo.svg" alt="logo">
-                <ul>
-                    <li><a href="#Connect with me">Connect with me</a></li>
+    <header class="site-header">
+        <div class="container">
+            <nav class="main-nav">
+                <a href="/" class="logo">
+                    <img src="Images and icons/Logo.svg" alt="Andrea Casonato logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#lets-connect" class="nav-link">Connect with me</a></li>
                 </ul>
             </nav>
+        </div>
     </header>
     
-    <section class="main">
-        <h1>Hi, I'm Andrea, a software developer with a background in UI/UX design.</h1>
-        <p>I got into development and design because I realized I love building websites and web apps.</p>
-        <p>Now, I'm busy creating softwares to make people's and business' lives easier</p>
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Hi, I'm Andrea, a software developer with a background in UI/UX design.</h1>
+                <p class="hero-text">I got into development and design because I realized I love building websites and web apps.</p>
+                <p class="hero-text">Now, I'm busy creating software to make people's and businesses' lives easier.</p>
+                
+                <div class="tags">
+                    <span class="tag">Javascript</span>
+                    <span class="tag">HTML/CSS</span>
+                    <span class="tag">Web Design</span>
+                    <span class="tag">UI/UX Design</span>
+                    <span class="tag">React.js</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Marketing</span>
+                </div>
+            </div>
+        </section>
         
-        <div class="tags">
-            <span>Javascript</span>
-            <span>HTML/CSS</span>
-            <span>Web Design</span>
-            <span>UI/UX Design</span>
-            <span>Next.js</span>
-            <span>Node.js</span>
-            <span>Marketing</span>
-        </div>
-    </section>
-    
-    <section class="work">
-        <h2>Latest work</h2>
-        <div>
-            <h3>Saas name 1</h3>
-            <p>Brief description</p>
-            <button>Check it out</button>
-        </div>
-        <div>
-            <h3>Saas name 2</h3>
-            <p>Brief description</p>
-            <button>Check it out</button>
-        </div>
-        <div>
-            <h3>Saas name 3</h3>
-            <p>Brief description</p>
-            <button>Check it out</button>
-        </div>
-    </section>
+        <section class="work-section">
+            <div class="container">
+                <h2>Latest work</h2>
+                <div class="work-grid">
+                    <article class="work-card">
+                        <h3>SaaS name 1</h3>
+                        <p>Developer and marketer</p>
+                        <p>This is an app targeted to...</p>
+                        <a href="#" class="btn">Check it out</a>
+                    </article>
+                    <article class="work-card">
+                        <h3>SaaS name 2</h3>
+                        <p>Developer and marketer</p>
+                        <p>This is an app targeted to...</p>
+                        <a href="#" class="btn">Check it out</a>
+                    </article>
+                    <article class="work-card">
+                        <h3>SaaS name 3</h3>
+                        <p>Developer and marketer</p>
+                        <p>This is an app targeted to...</p>
+                        <a href="#" class="btn">Check it out</a>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-    <section class="social-media">
-        <ul>
-            <li class="logo">Github</li>
-            <li class="logo">Behance</li>
-            <li class="logo">Dribbble</li>
-            <li class="logo">Linkedin</li>
-            <li class="logo">YouTube</li>
-            <li class="logo">E-mail</li>
-        </ul>
-    </section>
+        <section id="lets-connect" class="connect-section">
+            <div class="container">
+                <h2>Let's connect</h2>
+                <ul class="social-icons">
+                    <li>
+                        <a href="#" class="social-link" aria-label="Github">
+                            <div class="icon-circle">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                            <span class="social-name">Github</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <div class="icon-circle">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <span class="social-name">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link" aria-label="Dribbble">
+                            <div class="icon-circle">
+                                <i class="fa-brands fa-dribbble"></i>
+                            </div>
+                            <span class="social-name">Dribbble</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link" aria-label="Behance">
+                            <div class="icon-circle">
+                                <i class="fa-brands fa-behance"></i>
+                            </div>
+                            <span class="social-name">Behance</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <div class="icon-circle">
+                                <i class="fa-brands fa-youtube"></i>
+                            </div>
+                            <span class="social-name">YouTube</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link" aria-label="Email">
+                            <div class="icon-circle">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <span class="social-name">E-mail</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
-    <section>
-        <span class="footer">Hand coded by Andrea Casonato</span>
-    </section>
+    <footer class="site-footer">
+        <div class="container">
+            <p class="footer-text">
+                <i class="fa-solid fa-laptop"></i>
+                Hand coded by Andrea Casonato <span id="year"></span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
